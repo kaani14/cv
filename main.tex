@@ -1,44 +1,21 @@
-% Definition of the class moderncv with some parameters. Font size 11pt, paper size A4, font sans
 \documentclass[11pt, a4paper, sans]{moderncv}
 
-% Includes all the necessary packages from packages.tex
 \input{Einstellungen/packages}
-
-% Defines commands and parameters for modifying the included packages
 \input{Einstellungen/commands}
 
-
-% Beginning of document
 \begin{document}
 
 \pagestyle{empty}
 
-    \tcbset{
-    mysection/.style={
-        colback=blue!10,    % light blue background
-        colframe=blue!10,   % no border or same as background
-        boxrule=0pt,        % no border line
-        left=2mm, right=2mm, top=1mm, bottom=1mm,
-        width=\textwidth,
-        enlarge left by=0mm,
-        fonttitle=\bfseries, % bold text
-    }
-    }
-
-    \begin{tcolorbox}[mysection]
-    BERUFLICHER WERDEGANG
-    \end{tcolorbox}
-    
-    
-    %Creates the CV title with Name and photo 
+    \input{Einstellungen/colorbox}
+        
     \myCVtitle{Max}{Mustermann}{Abbildungen/profile.jpg}
     
-    \input{Inhalt/1_Angaben}                % Personal information
-    \input{Inhalt/2_Studium}                % Studies
-    \input{Inhalt/3_Berufserfahrung}        % Work experience
-    \input{Inhalt/4_Praktika}               % Internships
-    
-    % Signature
+    \input{Inhalt/1_Angaben}
+    \input{Inhalt/2_Studium}
+    \input{Inhalt/3_Berufserfahrung}
+    \input{Inhalt/4_Praktika}
+
     \sign{Max Mustermann}{Musterstadt}{Abbildungen/signature.jpg}
 
 \end{document}
