@@ -7,6 +7,7 @@
 % Reduce the length of the footer
 \setlength{\footskip}{-45pt} 
 \setmainfont{Cambria}
+
 %Define the classic red modern cv theme
 \moderncvtheme{classic}
 
@@ -29,21 +30,20 @@
   \end{tcolorbox}
 }
 
-% Definition of new commands to create the CV title and signature
 \newcommand{\myPhoto}[1]{\includegraphics[width = 0.2\textwidth]{#1}}
 
 \newcommand{\myName}[2]{{\sffamily\fontsize{30}{36}\selectfont #1\\[10pt] #2}}
 
-\newcommand{\myCVtitle}[3]{
- \begin{minipage}[b]{0.6\textwidth}
- \myName{#1}{#2}\\[10pt]
-    {\color{MyColor}\huge \textit{Lebenslauf}}
- \end{minipage}
- \hfill
- \fcolorbox{MyColor}{white}{\myPhoto{#3}}
- 
- \vspace{2em}
- }
+  \newcommand{\myCVtitle}[3]{
+  \begin{minipage}[b]{0.6\textwidth}
+  \myName{#1}{#2}\\[10pt]
+      {\color{MyColor}\huge \textit{Lebenslauf}}
+  \end{minipage}
+  \hfill
+  \fcolorbox{MyColor}{white}{\myPhoto{#3}}
+  
+  \vspace{1em}
+  }
 
 \newcommand{\sign}[3]{
     \vfill
@@ -52,4 +52,12 @@
     #2, \today, #1
     \end{FlushRight}
     \vfill
+}
+
+\newcommand{\cvHeading}[1]{
+  {\fontsize{\headingFontSize}{\lineHeight}\selectfont\fontspec{\cvHeadingFont}\textbf{#1}}%
+}
+
+\newcommand{\customCvList}[1]{
+  {\fontsize{\headingFontSize}{\lineHeight}\selectfont\fontspec{\cvHeadingFont}{#1}}%
 }

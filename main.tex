@@ -1,21 +1,27 @@
 \documentclass[11pt, a4paper, sans]{moderncv}
 
+\input{Einstellungen/parameters}
 \input{Einstellungen/packages}
 \input{Einstellungen/commands}
+\input{Einstellungen/fonts}
 
 \begin{document}
 
 \pagestyle{empty}
 
     \input{Einstellungen/colorbox}
-        
-    \myCVtitle{Max}{Mustermann}{Abbildungen/photo.jpg}
+
+    \ifthenelse{\equal{\theme}{fromTemplate}}{
+        \myCVtitle{Max}{Musterman}{Abbildungen/photo.jpg}
+    }
     
     \input{Inhalt/1_Angaben}
-    \input{Inhalt/2_Studium}
-    \input{Inhalt/3_Berufserfahrung}
-    \input{Inhalt/4_Praktika}
+    \input{Inhalt/2_Berufserfahrung}
+    \input{Inhalt/3_Studium}
+    %\input{Inhalt/4_Praktika}
+    %\input{Inhalt/5_Zusatzqualifikationen}
+    \input{Inhalt/6_Kenntnisse} 
 
-    \sign{Max Mustermann}{Musterstadt}{Abbildungen/signature.jpg}
+    %\sign{Kanishak Katahra}{Ulm}{Abbildungen/signature.jpg}
 
 \end{document}

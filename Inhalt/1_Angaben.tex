@@ -1,10 +1,27 @@
-%Reduce the vertical space by 10 points
 \vspace*{-10pt}
 
-%Personal information section
-\section{ANGABEN ZUR PERSON}
-    \cvline{Adresse}{Hauffstra\ss{}e 87 \newline 74047, Göppnigen}
-    \cvline{Telefon}{+49 999 9999999}
-    \cvline{E-mail}{\href{mailto:mustermail@XXXmail.com}{mustermail@XXXmail.com}}
-    \cvline{Staatsangehörigkeit}{Mexikanisch}
-    \cvline{Geburtstag}{01.01.2000}
+\ifthenelse{\equal{\theme}{fromTemplate}}{
+    \section{PERSONAL DATA}
+        \cvline{Adresse}{Hauffstra\ss{}e 87 \newline 74047, Göppnigen}
+        \cvline{Telefon}{+49 999 9999999}
+        \cvline{E-mail}{\href{mailto:mustermail@XXXmail.com}{mustermail@XXXmail.com}}
+
+
+}{}
+
+\ifthenelse{\equal{\theme}{default}}{
+
+\textblockorigin{0mm}{0mm}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+
+    \section{PERSONAL DATA}
+        \cvline{Name}{Max Musterman}
+        \cvline{Adresse}{Hauffstra\ss{}e 87 \newline 74047, Göppnigen}
+        \cvline{Telefon}{+49 999 9999999}
+        \cvline{E-mail}{\href{mailto:mustermail@XXXmail.com}{mustermail@XXXmail.com}}
+
+        \begin{textblock}{50}(150,15)  % The number 50 refers to the width of the block, (100, 100) are x and y coordinates
+        \includegraphics[width=4cm]{Abbildungen/photo.jpg}
+        \end{textblock}
+}{}
