@@ -1,17 +1,76 @@
-\section{WORK EXPERIENCE}
+\ifthenelse{\equal{\lang}{english}}{
+    
+    \section{WORK EXPERIENCE}
 
-\cventry{xx/xx - xx/xx}
-        {Stellenbezeichnung}
-        {Musterfirma GmbH}
-        {Musterstadt, Musterland}
-        {}   % Extra Info
+    \cventry{08/2024 - Present}
+        {\cvHeading{Embedded Software Developer, Scantinel Photonics GmbH, Ulm, Germany}}
+        {}
+        {}
+        {}
         {
+        \techStackScantinel
         \begin{itemize}
-            \item Tätigkeit 1
-            \item Tätigkeit 2
-            \item Tätigkeit 3
-            \item Ergebnisse
-            \item Ergebnisse 2
+            \item Contact point for next generation of the sample
+            \item Conception and implementation of software architecture
+            \item Programming laser control board, EEPROM, I2C sensor array
+            \item Interfacing DAC array using SPI for switching optical exits
+            \item Optimized communication signals through advanced PWM generation
+            \item Developed robust Ethernet-based communication between the device and GUI
+            \item Development of automated test scripts and simulation
+            \item Introduction and maintenance of Git repository including submodule management and CI/CD pipeline
+            \item Hardware debugging, oscilloscope measurement
         \end{itemize}
         }
 
+        \vspace*{10pt}
+
+    \cventry{04/2023 - 07/2024}
+        {\cvHeading{Embedded Software Developer, ALTEN GmbH, Coburg, Germany}}
+        {}
+        {}
+        {}
+        {
+        \techStackALTEN
+        \begin{itemize}
+            \item Software development for massage functionality in a car seat
+            \item Design software architect of Door Control Unit
+            \item Participation in ASPICE assessment
+        \end{itemize}
+        }
+
+        \vspace*{10pt}
+
+    \cventry{11/2021 – 03/2023}
+        {\cvHeading{Master Thesis and Intern, Blickfeld GmbH, Munich, Germany}}
+        {}
+        {}
+        {}
+        {
+        \techStackBlickfeld
+        \begin{itemize}
+            \item Thesis: “Lissajous Curves as Scan Patterns in a 3D Scanning LiDAR” (Grade: 1.3)
+            \item Software development for massage functionality in a car seat
+            \item Control of the mirrors to deflect the laser beam with MCUs
+            \item Development of laser triggering algorithm on ARM Cortex-M MCU
+            \item Optimized the code on STM32 to make it 16\% faster
+            \item Reduced power consumption by the ARM Cortex-M MCU by 9\%
+            \item Developed a Python based tool for flashing firmware images on MCU
+            \item Developed Python based tool for profiling
+        \end{itemize}
+        }
+
+        \vspace*{10pt}
+
+        \cventry{06/2017 – 09/2018}
+        {\cvHeading{Embedded Software Developer, Corporate Designz, Delhi, India}}
+        {}
+        {}
+        {}
+        {
+        \techStackCDPL
+        \begin{itemize}
+            \item Developed a controller for a motor driver
+            \item Developed a controller for eBike including system overcurrent protection and speed measurement
+        \end{itemize}
+        }
+}{}

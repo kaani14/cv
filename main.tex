@@ -4,6 +4,8 @@
 \input{Einstellungen/packages}
 \input{Einstellungen/commands}
 \input{Einstellungen/fonts}
+\input{Einstellungen/personalData}
+\input{Inhalt/techStack.tex}
 
 \begin{document}
 
@@ -11,17 +13,17 @@
 
     \input{Einstellungen/colorbox}
 
-    \ifthenelse{\equal{\theme}{fromTemplate}}{
-        \myCVtitle{Max}{Musterman}{Abbildungen/photo.jpg}
+    \ifthenelse{\equal{\theme}{modernCV}}{
+        \myCVtitle{\firstNamePD}{\lastNamePD}{Abbildungen/photo.jpg}
     }
-    
+
     \input{Inhalt/1_Angaben}
     \input{Inhalt/2_Berufserfahrung}
     \input{Inhalt/3_Studium}
     %\input{Inhalt/4_Praktika}
     %\input{Inhalt/5_Zusatzqualifikationen}
-    \input{Inhalt/6_Kenntnisse} 
-
+    \input{Inhalt/6_Kenntnisse}
+    \input{Inhalt/7_Projekte}
     %\sign{Kanishak Katahra}{Ulm}{Abbildungen/signature.jpg}
 
 \end{document}

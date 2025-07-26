@@ -1,27 +1,54 @@
 \vspace*{-10pt}
 
-\ifthenelse{\equal{\theme}{fromTemplate}}{
+\ifthenelse{\equal{\lang}{english}}{
     \section{PERSONAL DATA}
-        \cvline{Adresse}{Hauffstra\ss{}e 87 \newline 74047, Göppnigen}
-        \cvline{Telefon}{+49 999 9999999}
-        \cvline{E-mail}{\href{mailto:mustermail@XXXmail.com}{mustermail@XXXmail.com}}
 
+    \ifthenelse{\equal{\theme}{modernCV}}{
+            \cvline{Address}{\addressPD}
+            \cvline{Phone}{\phonePD}
+            \cvline{E-mail}{\emailPD}
+    }{}
 
+    \ifthenelse{\equal{\theme}{default}}{
+
+        \textblockorigin{0mm}{0mm}
+        \setlength{\TPHorizModule}{1mm}
+        \setlength{\TPVertModule}{1mm}
+
+                \cvline{Name}{\namePD}
+                \cvline{Address}{\addressPD}
+                \cvline{Phone}{\phonePD}
+                \cvline{E-mail}{\emailPD}
+
+                \begin{textblock}{50}(156.5,20)  % The number 50 refers to the width of the block, (100, 100) are x and y coordinates
+                \includegraphics[width=3.3cm]{Abbildungen/photo.jpg}
+                \end{textblock}
+    }{}
 }{}
 
-\ifthenelse{\equal{\theme}{default}}{
+\ifthenelse{\equal{\lang}{german}}{
+    \section{PERSÖNLICHE DATEN
+}
 
-\textblockorigin{0mm}{0mm}
-\setlength{\TPHorizModule}{1mm}
-\setlength{\TPVertModule}{1mm}
+    \ifthenelse{\equal{\theme}{modernCV}}{
+            \cvline{Anschrift}{\addressPD}
+            \cvline{Telefon}{\phonePD}
+            \cvline{E-mail}{\emailPD}
+    }{}
 
-    \section{PERSONAL DATA}
-        \cvline{Name}{Max Musterman}
-        \cvline{Adresse}{Hauffstra\ss{}e 87 \newline 74047, Göppnigen}
-        \cvline{Telefon}{+49 999 9999999}
-        \cvline{E-mail}{\href{mailto:mustermail@XXXmail.com}{mustermail@XXXmail.com}}
+    \ifthenelse{\equal{\theme}{default}}{
 
-        \begin{textblock}{50}(150,15)  % The number 50 refers to the width of the block, (100, 100) are x and y coordinates
-        \includegraphics[width=4cm]{Abbildungen/photo.jpg}
-        \end{textblock}
+        \textblockorigin{0mm}{0mm}
+        \setlength{\TPHorizModule}{1mm}
+        \setlength{\TPVertModule}{1mm}
+
+                \cvline{Name}{\namePD}
+                \cvline{Anschrift}{\addressPD}
+                \cvline{Telefon}{\phonePD}
+                \cvline{E-mail}{\emailPD}
+
+                \begin{textblock}{50}(156.5,20)  % The number 50 refers to the width of the block, (100, 100) are x and y coordinates
+                \includegraphics[width=3.3cm]{Abbildungen/photo.jpg}
+                \end{textblock}
+    }{}
 }{}
